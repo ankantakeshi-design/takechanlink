@@ -25,21 +25,18 @@
   h1 { font-size:26px; font-weight:900; margin-top:16px; }
   .sub { font-size:14px; color:#8A7364; font-weight:700; margin-top:6px; line-height:1.7; }
   .links { margin-top:28px; display:flex; flex-direction:column; gap:12px; }
-  a.btn { display:flex; align-items:center; gap:14px; text-align:left; text-decoration:none; color:#3A2E28; background:#fff; border-radius:18px; padding:16px 18px; box-shadow:0 2px 10px rgba(120,80,40,.10); border:2px solid transparent; }
+  a.btn { display:flex; align-items:center; gap:14px; text-align:left; text-decoration:none; color:#3A2E28; background:linear-gradient(90deg,#FFE9DC,#E3F1FF); border-radius:18px; padding:16px 18px; box-shadow:0 2px 10px rgba(120,80,40,.10); border:2px solid transparent; }
   a.btn:active { transform:scale(.98); }
   .emo { font-size:28px; width:40px; text-align:center; flex:none; }
+  .thumb { width:52px; height:52px; border-radius:12px; object-fit:cover; flex:none; background:#fff; box-shadow:0 1px 4px rgba(120,80,40,.18); }
   .tt { font-size:16px; font-weight:900; line-height:1.4; }
   .ds { font-size:12px; color:#9A8574; font-weight:700; margin-top:2px; }
   .arr { margin-left:auto; color:#C9BBA9; font-weight:900; flex:none; }
-  a.hp { background:linear-gradient(90deg,#FFE3D3,#DFF0FF); }
-  a.fire { border-color:#FFD9C2; }
-  a.water { border-color:#C8E2F7; }
-  a.sodan { border-color:#FFD3E0; }
-  a.ehon { background:linear-gradient(90deg,#FFE9C9,#FFE4F1); }
+  a.hp, a.fire, a.water, a.sodan, a.ehon { background:linear-gradient(90deg,#FFE9DC,#E3F1FF); border-color:transparent; }
   a.dark { background:#2B2B2B; color:#fff; }
   a.dark .ds { color:#BBB; }
-  a.ig { background:linear-gradient(90deg,#FFF0E0,#FFE4F1); }
-  a.line { border-color:#BDEBC0; }
+  a.ig { background:linear-gradient(90deg,#FFDFEF,#E5DEFF); }
+  a.line { background:#E7F8EA; border-color:transparent; }
   footer { margin-top:36px; font-size:12px; color:#B8A48E; font-weight:700; }
 </style>
 </head>
@@ -51,42 +48,42 @@
 
   <div class="links">
     <a class="btn fire" href="https://hisodate.pages.dev/">
-      <span class="emo">🔥</span>
+      <img class="thumb" src="thumbs/btn-hisodate.jpg" alt="">
       <span><span class="tt">水女子のための火育て塾🔥</span><div class="ds">感じているのに言葉にできない、あなたへ。無料相談の質問受付中</div></span>
       <span class="arr">▶</span>
     </a>
     <a class="btn ehon" href="https://kasuiehon.pages.dev/">
-      <span class="emo">📖</span>
+      <img class="thumb" src="thumbs/btn-ehon.jpg" alt="">
       <span><span class="tt">火水絵本</span><div class="ds">言葉がとくいな子と、感じすぎる子の物語</div></span>
       <span class="arr">▶</span>
     </a>
     <a class="btn hp" href="https://sintaichoseijyuku.pages.dev/">
-      <span class="emo">💃</span>
+      <img class="thumb" src="thumbs/btn-hp.jpg" alt="">
       <span><span class="tt">心体調整塾ホームページ</span><div class="ds">火水性質分析の全体像は、こちら</div></span>
       <span class="arr">▶</span>
     </a>
     <a class="btn fire" href="https://kamisindan.pages.dev/">
-      <span class="emo">🔥☔</span>
+      <img class="thumb" src="thumbs/btn-shindan.jpg" alt="">
       <span><span class="tt">火水性質診断（無料）</span><div class="ds">12タイプで、あなたの性質がわかります</div></span>
       <span class="arr">▶</span>
     </a>
     <a class="btn water" href="https://kamimikuji.pages.dev/">
-      <span class="emo">🎴</span>
+      <img class="thumb" src="thumbs/btn-omikuji.jpg" alt="">
       <span><span class="tt">火水おみくじ</span><div class="ds">毎日の火水バランスをチェック</div></span>
       <span class="arr">▶</span>
     </a>
     <a class="btn sodan" href="https://kasuisodan.pages.dev/">
-      <span class="emo">💑</span>
+      <img class="thumb" src="thumbs/btn-sodan.jpg" alt="">
       <span><span class="tt">火水相談｜夫婦のすれ違い実例集</span><div class="ds">気になる場面を、言葉で検索できます</div></span>
       <span class="arr">▶</span>
     </a>
     <a class="btn" href="https://note.com/takekasui">
-      <span class="emo">📝</span>
+      <img class="thumb" src="thumbs/btn-note-kasui.jpg" alt="">
       <span><span class="tt">note｜火水性質分析</span><div class="ds">火水×パートナーシップの記事と実例集</div></span>
       <span class="arr">▶</span>
     </a>
     <a class="btn" href="https://note.com/ankantakeshi">
-      <span class="emo">📝</span>
+      <img class="thumb" src="thumbs/btn-note-shintai.jpg" alt="">
       <span><span class="tt">note｜心体調整塾</span><div class="ds">心と体の読みもの</div></span>
       <span class="arr">▶</span>
     </a>
@@ -101,7 +98,7 @@
       <span class="arr">▶</span>
     </a>
     <a class="btn line" href="https://store.line.me/stickershop/author/1408627/ja">
-      <span class="emo">💚</span>
+      <img class="thumb" src="thumbs/btn-line.jpg" alt="">
       <span><span class="tt">LINEスタンプ</span><div class="ds">火水キャラクター ほか、作品一覧</div></span>
       <span class="arr">▶</span>
     </a>
