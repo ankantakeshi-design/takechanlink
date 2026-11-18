@@ -24,7 +24,13 @@
   .icon { width:120px; height:120px; border-radius:50%; box-shadow:0 4px 16px rgba(0,0,0,.12); }
   h1 { font-size:26px; font-weight:900; margin-top:16px; }
   .sub { font-size:14px; color:#8A7364; font-weight:700; margin-top:6px; line-height:1.7; }
-  .links { margin-top:28px; display:flex; flex-direction:column; gap:12px; }
+  .feature-wrap { margin-top:30px; }
+  a.btn.feature { padding:22px 20px; border-radius:22px; box-shadow:0 4px 18px rgba(120,80,40,.16); }
+  a.btn.feature .thumb { width:76px; height:76px; border-radius:16px; }
+  a.btn.feature .tt { font-size:19px; }
+  a.btn.feature .ds { font-size:13px; }
+  .more-label { margin-top:48px; font-size:13px; font-weight:900; color:#B8A48E; letter-spacing:.1em; }
+  .links { margin-top:18px; display:flex; flex-direction:column; gap:16px; }
   a.btn { display:flex; align-items:center; gap:14px; text-align:left; text-decoration:none; color:#3A2E28; background:linear-gradient(90deg,#FFE9DC,#E3F1FF); border-radius:18px; padding:16px 18px; box-shadow:0 2px 10px rgba(120,80,40,.10); border:2px solid transparent; }
   a.btn:active { transform:scale(.98); }
   .emo { font-size:28px; width:40px; text-align:center; flex:none; }
@@ -44,14 +50,19 @@
 <div class="wrap">
   <img class="icon" src="icon-512.png" alt="火水の太極図アイコン">
   <h1>心体調整塾 たけちゃん</h1>
-  <p class="sub">夫婦のすれ違いは、性格じゃなく「性質」のちがい🔥☔<br>結婚15年の実体験から生まれた、火水性質分析</p>
+  <p class="sub">夫婦のすれ違いは、性格じゃなく「性質」のちがい🔥☔</p>
 
-  <div class="links">
-    <a class="btn fire" href="https://hisodate.pages.dev/">
+  <div class="feature-wrap">
+    <a class="btn fire feature" href="https://hisodate.pages.dev/">
       <img class="thumb" src="thumbs/btn-hisodate.jpg" alt="">
       <span><span class="tt">水女子のための火育て塾🔥</span><div class="ds">感じているのに言葉にできない、あなたへ。無料相談の質問受付中</div></span>
       <span class="arr">▶</span>
     </a>
+  </div>
+
+  <p class="more-label">そのほかの窓口</p>
+
+  <div class="links">
     <a class="btn ehon" href="https://kasuiehon.pages.dev/">
       <img class="thumb" src="thumbs/btn-ehon.jpg" alt="">
       <span><span class="tt">火水絵本</span><div class="ds">言葉がとくいな子と、感じすぎる子の物語</div></span>
