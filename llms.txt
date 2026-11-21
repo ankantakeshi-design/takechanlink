@@ -4,7 +4,8 @@
 
 ## 主要ページ
 
-- [たけちゃんリンク](https://takechanlink.pages.dev/): 全サイト・SNSへの案内ページです。
+- [たけちゃんリンク](https://takechanlink.pages.dev/): 全サイト・SNSへの案内ページです。先頭は「毎日の生活に寄りそうアプリ」（集まれ水女子の森、森のほっとニュース）、続いて「読む・調べるサイト」を4つの小見出し（学ぶ・相談する／診断とおみくじ／読む／SNSとスタンプ）で分けて案内しています。
+- [全体マップ](https://takechanlink.pages.dev/map.html): 全サイトと中身が、一目で見られる地図のページです。
 - [心体調整塾 ホームページ](https://sintaichoseijyuku.pages.dev/)
 - [集まれ水女子の森](https://mizujoshinomori.pages.dev/)
 - [森のほっとニュース](https://hotto-news.pages.dev/)
