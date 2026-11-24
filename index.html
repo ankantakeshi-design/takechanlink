@@ -70,6 +70,12 @@
 .faq-item summary::after{content:"＋";position:absolute;right:6px;top:15px;font-size:13px;color:#77614D;font-weight:400;}
 .faq-item[open ] summary::after{content:"−";}
 .faq-a{padding:2px 4px 18px;font-size:15px;line-height:1.9;color:#3A2E28;}
+.faq-outer{border:2px solid #EBDCC9;border-radius:14px;background:#FFF6EC;overflow:hidden;}
+.faq-outer>summary{cursor:pointer;list-style:none;min-height:56px;display:flex;align-items:center;justify-content:center;padding:12px 16px;font-size:17px;font-weight:800;}
+.faq-outer>summary::-webkit-details-marker{display:none;}
+.faq-outer>summary::after{content:"▽";margin-left:10px;font-size:14px;}
+.faq-outer[open]>summary::after{content:"△";}
+.faq-inner{padding:2px 14px 14px;}
 </style>
 <script type="application/ld+json">
 {
@@ -246,12 +252,16 @@
   </div>
 
     <section class="faq-sec" aria-label="よくある質問">
-  <h2>よくある質問</h2>
-  <details class="faq-item"><summary>たけちゃんリンクは、どんなページですか？</summary><div class="faq-a">心体調整塾 たけちゃんの、すべての窓口を集めたリンク集です。集まれ水女子の森、森のほっとニュース、火水絵本、水女子のための火育て塾、火水性質診断、noteやInstagramなど、全部のサイトとSNSへ、ここから進めます。</div></details>
+    <details class="faq-outer">
+    <summary>よくある質問</summary>
+    <div class="faq-inner">
+    <details class="faq-item"><summary>たけちゃんリンクは、どんなページですか？</summary><div class="faq-a">心体調整塾 たけちゃんの、すべての窓口を集めたリンク集です。集まれ水女子の森、森のほっとニュース、火水絵本、水女子のための火育て塾、火水性質診断、noteやInstagramなど、全部のサイトとSNSへ、ここから進めます。</div></details>
   <details class="faq-item"><summary>どこから見るのがおすすめですか？</summary><div class="faq-a">まず「集まれ水女子の森」でひと休みするのがおすすめです。感じているのに言葉にできない水女子が、静かに過ごせる場所です。毎日のニュースが気になる方は「森のほっとニュース」、気持ちを言葉にする学びに興味のある方は「火育て塾」へどうぞ。</div></details>
   <details class="faq-item"><summary>月のリズムで暮らすためのサイトはありますか？</summary><div class="faq-a">あります。「集まれ水女子の森」です。月のカレンダーが中心のサイトで、新月・満月の日と、その星座に合わせたメッセージ、惑星の順行・逆行が分かります。新月の時期には、願いごとを書いたカード画像を作って、持ち帰ることもできます。このページのいちばん上のリンクから進めますよ。</div></details>
   <details class="faq-item"><summary>利用は無料ですか？</summary><div class="faq-a">このページも、リンク先の主なサイト（森・ほっとニュース・絵本・診断・おみくじ）も、無料で使えます。登録も不要です。</div></details>
   <details class="faq-item"><summary>たけちゃんは、どんな人ですか？</summary><div class="faq-a">心体調整塾のたけちゃんです。食品工場の製造技術者、心と体の整体師研究、土木設備の技術者を経て、夫婦15年の研究から生まれた「火水性質分析」をもとに、noteやSNSで発信しています。くわしい歩みは、リンク先の「僕のストーリー」に書きました。</div></details>
+      </div>
+    </details>
   </section>
 <footer>心体調整塾 たけちゃん</footer>
 </div>
