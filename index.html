@@ -111,6 +111,12 @@
   .story-fold summary::after{ content:" ▽"; font-size:11px; }
   .story-fold[open ] summary::after{ content:" △"; }
   .story-fold .sub{ margin-top:2px; }
+
+  /* ストーリー折りたたみに薄い点線の丸枠（2026-11-25） */
+  .story-fold{ text-align:center; }
+  .story-fold summary{ display:inline-block; border:1.5px dotted #B99B6B; border-radius:999px; padding:7px 16px; background:#FFFDF7; }
+  .story-fold summary::after{ font-size:12px; }
+  .story-fold .sub{ text-align:center; }
 </style>
 <script type="application/ld+json">
 {
