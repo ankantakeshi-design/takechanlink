@@ -103,6 +103,14 @@
 .faq-outer>summary::after{content:"▽";margin-left:10px;font-size:14px;}
 .faq-outer[open]>summary::after{content:"△";}
 .faq-inner{padding:2px 14px 14px;}
+
+  /* ストーリー文の小さな折りたたみ（2026-11-25） */
+  .story-fold{ margin:2px auto 6px; max-width:520px; }
+  .story-fold summary{ list-style:none; cursor:pointer; min-height:0; display:block; text-align:center; padding:8px 10px; font-size:13px; font-weight:700; color:#7A5F3D; }
+  .story-fold summary::-webkit-details-marker{ display:none; }
+  .story-fold summary::after{ content:" ▽"; font-size:11px; }
+  .story-fold[open ] summary::after{ content:" △"; }
+  .story-fold .sub{ margin-top:2px; }
 </style>
 <script type="application/ld+json">
 {
@@ -162,7 +170,7 @@
   <h1>心体調整塾 たけちゃん</h1>
   <p class="moon-sub"><a href="https://mizujoshinomori.pages.dev/">🌙 新月・満月、月のリズムで穏やかな毎日を</a></p>
   <p class="sub">まず、森でひと休みどうぞ。</p>
-  <p class="sub">アトピー、喘息、心療内科、生活保護。ボロボロだった僕の歩みは、<a href="https://note.com/takekasui/n/n0e262f80f544" style="color:#E8590C;">僕のストーリーはこちら</a>に書きました。</p>
+  <details class="story-fold"><summary>僕のストーリーについて</summary><p class="sub">アトピー、喘息、心療内科、生活保護。ボロボロだった僕の歩みは、<a href="https://note.com/takekasui/n/n0e262f80f544" style="color:#E8590C;">僕のストーリーはこちら</a>に書きました。</p></details>
 
   <div class="feature-wrap">
     <h2 class="group-label">毎日の生活に寄りそうアプリ</h2>
