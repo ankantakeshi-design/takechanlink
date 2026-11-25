@@ -117,6 +117,9 @@
   .story-fold summary{ display:inline-block; border:1.5px dotted #B99B6B; border-radius:999px; padding:7px 16px; background:#FFFDF7; }
   .story-fold summary::after{ font-size:12px; }
   .story-fold .sub{ text-align:center; }
+
+  /* ストーリー折りたたみは点線の下線だけに（2026-11-25） */
+  .story-fold summary{ border:none; border-radius:0; background:transparent; padding:8px 4px; text-decoration:underline dotted; text-decoration-color:rgba(107,79,53,.45); text-underline-offset:5px; }
 </style>
 <script type="application/ld+json">
 {
