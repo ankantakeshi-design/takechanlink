@@ -379,5 +379,64 @@
 }
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ef2baf89313c422b8bbb2573af866cf1"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+/* サイト分析の記録（コンテンツが使われたかを Supabase へ送る小さな仕組み） */
+(function(){
+  var SITE = 'take', PAGE = 'top';
+  var URL = 'https://twxxcjjffznjaeyconoc.supabase.co/rest/v1/ana_events';
+  var KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR3eHhjampmZnpuamFleWNvbm9jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTUwMTc1NTcsImV4cCI6MjExMDU5MzU1N30.MIVvDvZx03ai7mshyP3FR8JP0xe9Yu-7BgUjtIvvpew';
+  window.__ana = function(){};
+  try {
+    if (/[?&]ana_off=1/.test(location.search)) localStorage.setItem('ana-off', '1');
+    if (localStorage.getItem('ana-off') === '1') return;
+    var did = localStorage.getItem('ana-did');
+    if (!did) {
+      did = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+        : 'd' + Date.now().toString(36) + Math.random().toString(36).slice(2, 12);
+      localStorage.setItem('ana-did', did);
+    }
+    var ref = null;
+    try {
+      var qs = new URLSearchParams(location.search);
+      if (qs.get('utm_source')) ref = 'utm:' + qs.get('utm_source');
+      else if (document.referrer) ref = new URL(document.referrer).hostname || null;
+    } catch (e) {}
+    var dev = ((window.matchMedia && matchMedia('(pointer: coarse)').matches)
+      || /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) ? 'm' : 'd';
+    var lang = (navigator.language || '').slice(0, 2) || null;
+    function send(action, label, extra) {
+      var row = { site: SITE, action: action, label: label || null, ref: null, dev: null, lang: null, device_id: did };
+      if (extra) for (var k in extra) row[k] = extra[k];
+      try {
+        fetch(URL, { method: 'POST',
+          headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+          body: JSON.stringify([row]), keepalive: true }).catch(function(){});
+      } catch (e) {}
+    }
+    window.__ana = send;
+    send('visit', PAGE, { ref: ref, dev: dev, lang: lang });
+    var t0 = Date.now(), stayed = false;
+    function stay() {
+      if (stayed) return; stayed = true;
+      var sec = (Date.now() - t0) / 1000;
+      send('stay', sec <= 5 ? '5s' : sec <= 30 ? '30s' : sec <= 60 ? '1m' : sec <= 180 ? '3m' : '3m+');
+    }
+    document.addEventListener('visibilitychange', function(){ if (document.hidden) stay(); });
+    window.addEventListener('pagehide', stay);
+  } catch (e) {}
+})();
+</script>
+
+<script>
+/* カードが押された記録（どの窓口へ流れたか） */
+document.addEventListener('click', function(e){
+  var t = e.target;
+  var a = t && t.closest ? t.closest('a.btn') : null;
+  if (!a || !window.__ana) return;
+  var tt = a.querySelector('.tt');
+  var name = tt ? tt.textContent.trim() : '';
+  if (name) __ana('card_click', name);
+});
+</script>
 </body>
 </html>
